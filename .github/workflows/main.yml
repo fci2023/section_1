@@ -11,7 +11,8 @@ jobs:
       - name: "List all files"
         run: ls
 
+      - uses: checkout@v3
 
-      - name: "Print the current directory"
-        run: pwd
+      - name: "List all files"
+        run: ls
 
