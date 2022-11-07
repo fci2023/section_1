@@ -14,5 +14,9 @@ jobs:
         run: docker login --username ${{ secrets.USERNAME }} --password ${{ secrets.TOKEN }}
 
       - name: "Build docker image"
-        run: docker build -t fjnfjew .
+        run: docker build -t ${{ secrets.USERNAME }}/fjnfjew .
+
+
+      - name: "Push"
+        run: docker push ${{ secrets.USERNAME }}/fjnfjew
 
